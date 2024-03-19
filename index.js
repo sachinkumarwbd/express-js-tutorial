@@ -14,20 +14,23 @@ app.use(express.static('./public'))
 //   res.send("index")
 // })
 app.get('/', function (req, res) {
-    res.render("index",{age:14})   //render home ejs pages
+    res.render("index",)   //render home ejs pages
   })
 
-  app.get("/error",function(req, res, next){
-  throw Error("error")
+  app.get("/error",function(req, res, next){  // error handling
+  throw Error("somthing went wrong")
+ 
   })
 
-  
   app.get('/contect', function (req, res) {
-    res.render("contect")   //render contect ejs pages
+    res.render("contect",{name:" sachin"})   //render contect ejs pages
   })
+
 // app.get('/profile/:username', function (req, res) {
 //     res.send(`hello ${req.params.username}`)
 //   })
+
+
 app.use(function errorHandler (err, req, res, next) {  //error handling
     if (res.headersSent) {
       return next(err)

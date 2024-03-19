@@ -13,11 +13,18 @@ params
 ejs install ans setup
     -install ejs
     -set view engine
-    create biew folder
+    create view folder
     -create ejs file
     -render ejs files inside router
+
+
 express static files setup
-create publice folder
+create publice folder 
+and three folder create and path
+-1 images
+-2 stylesheets
+-3 javascripts
+
 
 
 
